@@ -1,5 +1,5 @@
 # MVVMC-example
-## CoorDinator Flow and relationship
+## CoorDinator Flow and Relationship
 1. AppDelegate holds on top the AppCoordinator
 2. Every Coordinator holds an array of its child coordinators
 3. Each navigationController gets its own coordinator
@@ -7,7 +7,7 @@
 
 ![image](https://github.com/masonchang1991/MVVMC-example/blob/master/Coordinator%20Flow.png)
 
-# integrates with MVVM
+# Integrates with MVVM
 
 ## Model:
 1. handle data access
@@ -33,7 +33,7 @@
 2. build the MVVM stacks
 
 
-## relationship
+## Relationship
 ![image](https://github.com/masonchang1991/MVVMC-example/blob/master/MVVMC%20relationship1.png)
 
 ![image](https://github.com/masonchang1991/MVVMC-example/blob/master/MVVMC%20relationship2.png)
