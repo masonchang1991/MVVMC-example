@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol FriendListModel {
+    func getFriends(_ completion: @escaping (([Friend]) -> ()))
+}

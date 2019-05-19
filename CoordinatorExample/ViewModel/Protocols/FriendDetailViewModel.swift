@@ -7,3 +7,26 @@
 //
 
 import Foundation
+
+protocol FriendDetailViewModelViewDelegate {
+    func friendDetailDidFriendDataChange(viewModel: FriendDetailViewModel, friend: Friend)
+    func friendDetailFavoriteStateDidChange(viewModel: FriendDetailViewModel, isFavorite: Bool)
+}
+
+protocol FriendDetailViewModelCoordinatorDelegate {
+    func friendDetailDidFinish(viewModel: FriendDetailViewModel)
+}
+
+protocol FriendDetailViewModel {
+    
+    var model: FriendDetailModel? { get set }
+    var viewDelegate: FriendDetailViewModelViewDelegate? { get set }
+    var coordinatorDelegate: FriendDetailViewModelCoordinatorDelegate? { get set }
+    
+    var isFavorite: Bool { get set }
+    var friend: Friend { get set }
+    
+    func getCurrentFavoriteState()
+    func detailDidFinish()
+    func changeState()
+}

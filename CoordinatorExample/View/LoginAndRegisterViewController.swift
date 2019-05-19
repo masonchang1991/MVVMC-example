@@ -8,14 +8,16 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, Storyboarded {
+class LoginAndRegisterViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var accountTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginOrRegisterButton: UIButton!
+    
+    @IBOutlet weak var goToAnotherPageButton: UIButton!
     @IBOutlet weak var errorMessageLabel: UILabel!
     
-    var viewModel: LoginViewModel? {
+    var viewModel: LoginAndRegisterViewModel? {
         willSet {
             viewModel?.viewDelegate = nil
         }
@@ -40,25 +42,29 @@ class LoginViewController: UIViewController, Storyboarded {
             accountTextField.text = viewModel.account
             passwordTextField.text = viewModel.password
             errorMessageLabel.text = viewModel.errorMessage
-            loginButton.isEnabled = viewModel.canSubmit
+            loginOrRegisterButton.isEnabled = viewModel.canSubmit
         } else {
             accountTextField.text = ""
             passwordTextField.text = ""
             errorMessageLabel.text = ""
-            loginButton.isEnabled = false
+            loginOrRegisterButton.isEnabled = false
         }
     }
     
     private func setupViews() {
-        title = "Login"
-        accountTextField.placeholder = "enter your account"
-        passwordTextField.placeholder = "enter yout password"
+        title = viewModel?.title
+        loginOrRegisterButton.setTitle(viewModel?.title, for: .normal)
+        accountTextField.placeholder = viewModel?.accountPlaceholder
+        passwordTextField.placeholder = viewModel?.passwordPlaceholder
+        goToAnotherPageButton.setTitle(viewModel?.goToAnotherPageButtonTitle,
+                                       for: .normal)
     }
     
     private func setupActions() {
         accountTextField.addTarget(self, action: #selector(accountFieldDidChange(_:)), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(passwordFieldDidChange(_:)), for: .editingChanged)
-        loginButton.addTarget(self, action: #selector(loginBtnPress(_:)), for: .touchUpInside)
+        loginOrRegisterButton.addTarget(self, action: #selector(loginBtnPress(_:)), for: .touchUpInside)
+        goToAnotherPageButton.addTarget(self, action: #selector(goToAnotherPage(_:)), for: .touchUpInside)
     }
     
     @objc private func accountFieldDidChange(_ textField: UITextField) {
@@ -76,15 +82,19 @@ class LoginViewController: UIViewController, Storyboarded {
     @objc private func loginBtnPress(_ sender: UIButton) {
         viewModel?.submit()
     }
+    
+    @objc private func goToAnotherPage(_ sender: UIButton) {
+        viewModel?.goToAnotherPage()
+    }
 }
 
-extension LoginViewController: LoginViewModelViewDelegate {
+extension LoginAndRegisterViewController: LoginAndRegisterViewModelViewDelegate {
     
-    func canSubmitStatusDidChange(_ viewModel: LoginViewModel, status: Bool) {
-        loginButton.isEnabled = status
+    func canSubmitStatusDidChange(_ viewModel: LoginAndRegisterViewModel, status: Bool) {
+        loginOrRegisterButton.isEnabled = status
     }
     
-    func errorMessageDidChange(_ viewModel: LoginViewModel, message: String) {
+    func errorMessageDidChange(_ viewModel: LoginAndRegisterViewModel, message: String) {
         errorMessageLabel.text = message
     }
 }

@@ -8,23 +8,69 @@
 
 import UIKit
 
-class FriendDetailViewController: UIViewController {
+class FriendDetailViewController: UIViewController, Storyboarded {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var friendStatusView: UIView!
+    
+    var viewModel: FriendDetailViewModel? {
+        willSet {
+            viewModel?.viewDelegate = nil
+        }
+        didSet {
+            viewModel?.viewDelegate = self
+            // RefreshView
+            if oldValue != nil {
+                refreshDisplay()
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViews()
+        setupActions()
+        viewModel?.getCurrentFavoriteState()
     }
-    */
 
+    private func refreshDisplay() {
+        nameLabel.text = viewModel?.friend.name
+        viewModel?.getCurrentFavoriteState()
+    }
+    
+    private func setupViews() {
+        let backButton = UIBarButtonItem(image: UIImage(named: "back"),
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(pop))
+        self.navigationItem.setLeftBarButton(backButton, animated: false)
+        
+        nameLabel.text = viewModel?.friend.name
+        friendStatusView.backgroundColor = (viewModel?.isFavorite ?? false) ? UIColor.red: UIColor.blue
+    }
+    
+    private func setupActions() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapFavoriteStateView))
+        friendStatusView.isUserInteractionEnabled = true
+        friendStatusView.addGestureRecognizer(tap)
+    }
+    
+    @objc private func tapFavoriteStateView() {
+       viewModel?.changeState()
+    }
+    
+    @objc private func pop() {
+        viewModel?.detailDidFinish()
+    }
+}
+
+extension FriendDetailViewController: FriendDetailViewModelViewDelegate {
+    
+    func friendDetailDidFriendDataChange(viewModel: FriendDetailViewModel, friend: Friend) {
+        nameLabel.text = friend.name
+    }
+    
+    func friendDetailFavoriteStateDidChange(viewModel: FriendDetailViewModel, isFavorite: Bool) {
+        friendStatusView.backgroundColor = isFavorite ? UIColor.red: UIColor.blue
+    }
 }

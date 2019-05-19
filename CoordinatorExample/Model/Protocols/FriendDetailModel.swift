@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+protocol FriendDetailModel {
+    func addFriendToFavorite(_ friend: Friend, completion: @escaping ((Error?) -> ()))
+    func removeFriendFromFavorite(_ friend: Friend, completion: @escaping ((Error?) -> ()))
+    func getFriendFavoriteStatus(_ friend: Friend, completion: @escaping ((_ isFavorite: Bool, _ error: Error?) -> ()))
+}

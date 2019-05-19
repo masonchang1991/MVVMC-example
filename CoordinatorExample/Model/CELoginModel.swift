@@ -8,21 +8,16 @@
 
 import Foundation
 
-class CELoginModel: LoginModel {
+class CELoginModel: LoginAndRegisterModel {
     
     func login(account: String, password: String, completionHandler: @escaping (LoginType) -> ()) {
         // Model always use aysnchronous
-        DispatchQueue.global().async {
-            if account == "developer" && password == "112233" {
-                completionHandler(.developer)
-            } else if account == "mason001" && password == "112233" {
-                completionHandler(.normalSuccess)
-            } else {
-                let error = NSError(domain: "CE",
-                                    code: 1,
-                                    userInfo: [NSLocalizedDescriptionKey: "Invalid Account or Password"])
-                completionHandler(.error(error))
-            }
+        let localDataService = AppManager.shared.localDataService
+        let user = UserAccount(account: account, password: password)
+        if localDataService.checkIfUserIsExist(user) {
+            completionHandler(.normalSuccess)
+        } else {
+            completionHandler(.error(nil))
         }
     }
 }

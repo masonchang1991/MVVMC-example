@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class CEFriendListModel: FriendListModel {
+    
+    func getFriends(_ completion: @escaping (([Friend]) -> ())) {
+        DispatchQueue.global().async {
+          completion(Friend.fakeFriends())
+        }
+    }
+}

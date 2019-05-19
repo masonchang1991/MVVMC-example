@@ -25,13 +25,10 @@ class NormalViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         viewModel?.fetchName()
     }
-
 }
 
 extension NormalViewController: NormalViewModelViewDelegate {
     func nameDidChange(viewModel: NormalViewModel, name: String) {
         nameLabel.text = name
     }
-    
-    
 }

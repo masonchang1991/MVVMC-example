@@ -10,6 +10,7 @@ import Foundation
 
 struct Friend: Codable, Equatable {
     var name: String = "New Friend"
+    var isFavorite: Bool? = false
     
     static func fakeFriends() -> [Friend] {
         let url = Bundle.main.url(forResource: "friends", withExtension: "json")!
@@ -20,6 +21,6 @@ struct Friend: Codable, Equatable {
     }
     
     static func ==(lefe: Friend, right: Friend) -> Bool {
-        return lefe.name == right.name 
+        return lefe.name == right.name && lefe.isFavorite == right.isFavorite
     }
 }

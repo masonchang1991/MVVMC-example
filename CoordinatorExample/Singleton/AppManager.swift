@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class AppManager {
+    
+    private init() { }
+    
+    static let shared = AppManager()
+    
+    var localDataService: LocalDataService = LocalDataService()
+    
+    static func active() {
+        let _ = AppManager.shared
+    }
+    
+}

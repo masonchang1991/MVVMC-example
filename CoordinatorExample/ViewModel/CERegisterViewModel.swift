@@ -1,20 +1,20 @@
 //
-//  CELoginViewModel.swift
+//  CERegisterViewModel.swift
 //  CoordinatorExample
 //
-//  Created by Mason on 2019/5/16.
+//  Created by Mason on 2019/5/19.
 //  Copyright © 2019 MS. All rights reserved.
 //
 
 import Foundation
 
-class CELoginViewModel: LoginAndRegisterViewModel {
-
-    var title: String = "Login"
+class CERegisterViewModel: LoginAndRegisterViewModel {
+    
+    var title: String = "Register"
     
     var model: LoginAndRegisterModel?
-    weak var viewDelegate: LoginAndRegisterViewModelViewDelegate?
-    weak var coordinatorDelegate: LoginAndRegisterViewModelCoordinatorDelegate?
+    var viewDelegate: LoginAndRegisterViewModelViewDelegate?
+    var coordinatorDelegate: LoginAndRegisterViewModelCoordinatorDelegate?
     
     fileprivate var accountIsValidFormat: Bool = false
     var account: String = "" {
@@ -48,7 +48,7 @@ class CELoginViewModel: LoginAndRegisterViewModel {
     }
     var passwordPlaceholder: String = "enter yout password"
     
-    var goToAnotherPageButtonTitle: String = "No account? Register now!"
+    var goToAnotherPageButtonTitle: String = "has an account? Login now!"
     
     var canSubmit: Bool {
         return accountIsValidFormat && passwordIsValidFormat
@@ -70,25 +70,19 @@ class CELoginViewModel: LoginAndRegisterViewModel {
             return
         }
         
-        let modelCompletionHandler = { (type: LoginType) in
-            // Make sure on the main thread
-            DispatchQueue.main.async {
-                switch type {
-                case .developer:
-                    self.coordinatorDelegate?.authenticateViewModelDidLogin(viewModel: self, type: type)
-                case .normalSuccess:
-                    self.coordinatorDelegate?.authenticateViewModelDidLogin(viewModel: self, type: type)
-                case .error(let error):
-                    self.errorMessage = "not exist"
-                }
+        let registerHandler = { [weak self](error: Error?) in
+            guard let self = self else { return }
+            if let _ = error {
+                self.errorMessage = "already exist"
+            } else {
+                self.coordinatorDelegate?.authenticateViewModelDidRegister(viewModel: self)
             }
         }
-        // Call Model to execute login
-        dataModel.login(account: account, password: password, completionHandler: modelCompletionHandler)
+        dataModel.register(account: account, password: password, completion: registerHandler)
     }
     
     func goToAnotherPage() {
-        self.coordinatorDelegate?.goToRegisterPage()
+        self.coordinatorDelegate?.backToLoginPage()
     }
     
     /// Validate account is at least 6 characters
@@ -102,5 +96,4 @@ class CELoginViewModel: LoginAndRegisterViewModel {
         let trimmedString = password.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         return trimmedString.count > 5
     }
-    
 }

@@ -8,8 +8,21 @@
 
 import UIKit
 
-class FriendListTableViewController: UITableViewController {
-
+class FriendListTableViewController: UITableViewController, Storyboarded {
+    
+    var viewModel: FriendListViewModel? {
+        willSet {
+            viewModel?.viewDelegate = nil
+        }
+        didSet {
+            viewModel?.viewDelegate = self
+            // RefreshView
+            if oldValue != nil {
+                refreshDisplay()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,29 +31,42 @@ class FriendListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "friendCell")
+        viewModel?.getMyFriends()
     }
 
+    private func refreshDisplay() {
+        tableView.reloadData()
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return viewModel?.friends.count ?? 0
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath)
+        if let viewModel = viewModel {
+            cell.textLabel?.text = viewModel.friends[indexPath.row].name
+            cell.backgroundColor = (viewModel.friends[indexPath.row].isFavorite ?? false) ? UIColor.red: UIColor.white
+            if viewModel.friends[indexPath.row].isFavorite ?? false {
+                print("favorite:", viewModel.friends[indexPath.row].name)
+            }
+        }
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.tapFriendAt(indexPath)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -87,4 +113,10 @@ class FriendListTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension FriendListTableViewController: FriendListViewModelViewDelegate {
+    func friendListDidUpdate(viewModel: FriendListViewModel) {
+        self.tableView.reloadData()
+    }
 }

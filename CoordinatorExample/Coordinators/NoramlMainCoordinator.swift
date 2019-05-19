@@ -13,7 +13,7 @@ class NormalMainCoordinator: Coordinator {
     
     var childCoordinator: [Coordinator] = []
     
-    var navigationController: UINavigationController
+    unowned var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -22,27 +22,19 @@ class NormalMainCoordinator: Coordinator {
     func start() {
         let mainTabbarControlelr = MainTabbarController()
         
-        let normalCoordinator1 = NormalCoordinator(navigationController: UINavigationController())
-        childCoordinator.append(normalCoordinator1)
-        normalCoordinator1.navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
-        normalCoordinator1.delegate = self
-        normalCoordinator1.start()
+        let friendListCoordinator = FriendListCoordinator(navigationController: UINavigationController())
+        childCoordinator.append(friendListCoordinator)
+        friendListCoordinator.navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 3)
+        friendListCoordinator.start()
         
-        let normalCoordinator2 = NormalCoordinator(navigationController: UINavigationController())
-        childCoordinator.append(normalCoordinator2)
-        normalCoordinator2.navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-        normalCoordinator2.delegate = self
-        normalCoordinator2.start()
+        let normalCoordinator = NormalCoordinator(navigationController: UINavigationController())
+        childCoordinator.append(normalCoordinator)
+        normalCoordinator.navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
+        normalCoordinator.delegate = self
+        normalCoordinator.start()
         
-        let normalCoordinator3 = NormalCoordinator(navigationController: UINavigationController())
-        childCoordinator.append(normalCoordinator3)
-        normalCoordinator3.navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 2)
-        normalCoordinator3.delegate = self
-        normalCoordinator3.start()
-        
-        mainTabbarControlelr.viewControllers = [normalCoordinator1.navigationController,
-                                                normalCoordinator2.navigationController,
-                                                normalCoordinator3.navigationController]
+        mainTabbarControlelr.viewControllers = [friendListCoordinator.navigationController,
+                                                normalCoordinator.navigationController]
         
         self.navigationController.viewControllers = [mainTabbarControlelr]
     }

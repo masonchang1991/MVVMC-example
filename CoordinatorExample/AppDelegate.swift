@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
+        AppManager.active()
+        
         return true
     }
 }
