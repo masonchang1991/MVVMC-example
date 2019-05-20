@@ -34,9 +34,9 @@
 
 
 ## Relationship
-![image](https://github.com/masonchang1991/MVVMC-example/blob/master/MVVMC%20relationship1.png)
+![image](https://github.com/masonchang1991/MVVMC-example/blob/master/relationship1.png)
 
-![image](https://github.com/masonchang1991/MVVMC-example/blob/master/MVVMC%20relationship2.png)
+![image](https://github.com/masonchang1991/MVVMC-example/blob/master/relationship.png)
 
 
 # Reference:
