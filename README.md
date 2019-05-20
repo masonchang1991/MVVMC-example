@@ -36,7 +36,7 @@
 ## Relationship
 ![image](https://github.com/masonchang1991/MVVMC-example/blob/master/relationship1.png)
 
-![image](https://github.com/masonchang1991/MVVMC-example/blob/master/relationship.png)
+![image](https://github.com/masonchang1991/MVVMC-example/blob/master/relationship2.png)
 
 
 # Reference:
