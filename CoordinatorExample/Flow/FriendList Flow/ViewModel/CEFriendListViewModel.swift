@@ -11,8 +11,8 @@ import Foundation
 class CEFriendListViewModel: FriendListViewModel {
     
     var model: FriendListModel?
-    var viewDelegate: FriendListViewModelViewDelegate?
-    var coordinatorDelegate: FriendListViewModelCoordinatorDelegate?
+    weak var viewDelegate: FriendListViewModelViewDelegate?
+    weak var coordinatorDelegate: FriendListViewModelCoordinatorDelegate?
     
     var friends: [Friend] = [] {
         didSet {

@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol FriendDetailViewModelViewDelegate {
+protocol FriendDetailViewModelViewDelegate: class {
     func friendDetailDidFriendDataChange(viewModel: FriendDetailViewModel, friend: Friend)
     func friendDetailFavoriteStateDidChange(viewModel: FriendDetailViewModel, isFavorite: Bool)
 }
 
-protocol FriendDetailViewModelCoordinatorDelegate {
+protocol FriendDetailViewModelCoordinatorDelegate: class {
     func friendDetailDidFinish(viewModel: FriendDetailViewModel)
 }
 

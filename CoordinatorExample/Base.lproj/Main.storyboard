@@ -118,6 +118,20 @@
             </objects>
             <point key="canvasLocation" x="949" y="-42"/>
         </scene>
+        <!--Tabbar Controller-->
+        <scene sceneID="TgQ-rW-e8z">
+            <objects>
+                <tabBarController storyboardIdentifier="TabbarController" id="cjO-gA-tLB" customClass="TabbarController" customModule="CoordinatorExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d8o-dR-eq2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfG-14-MYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="-824"/>
+        </scene>
         <!--Friend List Table View Controller-->
         <scene sceneID="Yti-jU-Y5Y">
             <objects>

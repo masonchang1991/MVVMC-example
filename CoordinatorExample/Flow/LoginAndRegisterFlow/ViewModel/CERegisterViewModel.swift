@@ -13,8 +13,8 @@ class CERegisterViewModel: LoginAndRegisterViewModel {
     var title: String = "Register"
     
     var model: LoginAndRegisterModel?
-    var viewDelegate: LoginAndRegisterViewModelViewDelegate?
-    var coordinatorDelegate: LoginAndRegisterViewModelCoordinatorDelegate?
+    weak var viewDelegate: LoginAndRegisterViewModelViewDelegate?
+    weak var coordinatorDelegate: LoginAndRegisterViewModelCoordinatorDelegate?
     
     fileprivate var accountIsValidFormat: Bool = false
     var account: String = "" {

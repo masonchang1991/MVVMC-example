@@ -86,6 +86,10 @@ class LoginAndRegisterViewController: UIViewController, Storyboarded {
     @objc private func goToAnotherPage(_ sender: UIButton) {
         viewModel?.goToAnotherPage()
     }
+    
+    deinit {
+        print(classForCoder.self, "dealloc")
+    }
 }
 
 extension LoginAndRegisterViewController: LoginAndRegisterViewModelViewDelegate {

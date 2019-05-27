@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930269AD229BB5C100965CBE /* BaseNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930269AC229BB5C100965CBE /* BaseNav.swift */; };
+		93219D40229591DE00B18F6E /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93219D3F229591DE00B18F6E /* BaseCoordinator.swift */; };
+		93219D44229653F700B18F6E /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93219D43229653F700B18F6E /* TabbarView.swift */; };
+		93219D4A22965C9800B18F6E /* AuthModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93219D4922965C9800B18F6E /* AuthModuleFactory.swift */; };
+		93219D5222965E5000B18F6E /* ModuleFactoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93219D5122965E5000B18F6E /* ModuleFactoryImp.swift */; };
+		93219D592296948700B18F6E /* CoordinatorFactoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93219D582296948700B18F6E /* CoordinatorFactoryImp.swift */; };
+		93219D5E2296991F00B18F6E /* NormalModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93219D5D2296991F00B18F6E /* NormalModuleFactory.swift */; };
+		93219D672296A09D00B18F6E /* FriendListModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93219D662296A09D00B18F6E /* FriendListModuleFactory.swift */; };
+		93219D692296A1DB00B18F6E /* FriendDetailModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93219D682296A1DB00B18F6E /* FriendDetailModuleFactory.swift */; };
 		932E3D23228D220700C1F3A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3D22228D220700C1F3A9 /* AppDelegate.swift */; };
 		932E3D25228D220700C1F3A9 /* LoginAndRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3D24228D220700C1F3A9 /* LoginAndRegisterViewController.swift */; };
 		932E3D28228D220700C1F3A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 932E3D26228D220700C1F3A9 /* Main.storyboard */; };
@@ -23,8 +32,8 @@
 		932E3D65228D41A600C1F3A9 /* CELoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3D64228D41A600C1F3A9 /* CELoginViewModel.swift */; };
 		932E3D67228D572000C1F3A9 /* CELoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3D66228D572000C1F3A9 /* CELoginModel.swift */; };
 		932E3D69228D5B5F00C1F3A9 /* LoginAndRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3D68228D5B5F00C1F3A9 /* LoginAndRegisterCoordinator.swift */; };
-		932E3D78228DB66E00C1F3A9 /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3D77228DB66E00C1F3A9 /* MainTabbarController.swift */; };
-		932E3D7A228DC85E00C1F3A9 /* NoramlMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3D79228DC85E00C1F3A9 /* NoramlMainCoordinator.swift */; };
+		932E3D78228DB66E00C1F3A9 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3D77228DB66E00C1F3A9 /* TabbarController.swift */; };
+		932E3D7A228DC85E00C1F3A9 /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3D79228DC85E00C1F3A9 /* TabbarCoordinator.swift */; };
 		932E3D7C228DC88C00C1F3A9 /* NormalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3D7B228DC88C00C1F3A9 /* NormalCoordinator.swift */; };
 		932E3D7E228DC94E00C1F3A9 /* NormalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3D7D228DC94E00C1F3A9 /* NormalModel.swift */; };
 		932E3D80228DC97F00C1F3A9 /* CENormalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3D7F228DC97F00C1F3A9 /* CENormalModel.swift */; };
@@ -47,6 +56,11 @@
 		932E3DA5228F294B00C1F3A9 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3DA4228F294B00C1F3A9 /* AppManager.swift */; };
 		932E3DA9228F29AB00C1F3A9 /* LocalDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3DA8228F29AB00C1F3A9 /* LocalDataService.swift */; };
 		932E3DAC228F2FD500C1F3A9 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E3DAB228F2FD500C1F3A9 /* NotificationName.swift */; };
+		936178F82295391E00144A97 /* DeepLinkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936178F72295391E00144A97 /* DeepLinkOption.swift */; };
+		936178FC2295465F00144A97 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936178FB2295465F00144A97 /* CoordinatorFactory.swift */; };
+		936178FE229546B100144A97 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936178FD229546B100144A97 /* Presentable.swift */; };
+		93617901229548E600144A97 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93617900229548E600144A97 /* Router.swift */; };
+		9361790322954BD600144A97 /* RouterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361790222954BD600144A97 /* RouterImp.swift */; };
 		93F8C3FA2291706100ABB0FA /* CERegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F8C3F92291706100ABB0FA /* CERegisterViewModel.swift */; };
 		93F8C3FE2291712700ABB0FA /* CERegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F8C3FD2291712700ABB0FA /* CERegisterModel.swift */; };
 		93F8C4002291721000ABB0FA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F8C3FF2291721000ABB0FA /* User.swift */; };
@@ -70,6 +84,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		930269AC229BB5C100965CBE /* BaseNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNav.swift; sourceTree = "<group>"; };
+		93219D3F229591DE00B18F6E /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		93219D43229653F700B18F6E /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		93219D4922965C9800B18F6E /* AuthModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleFactory.swift; sourceTree = "<group>"; };
+		93219D5122965E5000B18F6E /* ModuleFactoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryImp.swift; sourceTree = "<group>"; };
+		93219D582296948700B18F6E /* CoordinatorFactoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryImp.swift; sourceTree = "<group>"; };
+		93219D5D2296991F00B18F6E /* NormalModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModuleFactory.swift; sourceTree = "<group>"; };
+		93219D662296A09D00B18F6E /* FriendListModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListModuleFactory.swift; sourceTree = "<group>"; };
+		93219D682296A1DB00B18F6E /* FriendDetailModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailModuleFactory.swift; sourceTree = "<group>"; };
 		932E3D1F228D220700C1F3A9 /* CoordinatorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		932E3D22228D220700C1F3A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		932E3D24228D220700C1F3A9 /* LoginAndRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegisterViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +115,8 @@
 		932E3D64228D41A600C1F3A9 /* CELoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CELoginViewModel.swift; sourceTree = "<group>"; };
 		932E3D66228D572000C1F3A9 /* CELoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CELoginModel.swift; sourceTree = "<group>"; };
 		932E3D68228D5B5F00C1F3A9 /* LoginAndRegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegisterCoordinator.swift; sourceTree = "<group>"; };
-		932E3D77228DB66E00C1F3A9 /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
-		932E3D79228DC85E00C1F3A9 /* NoramlMainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoramlMainCoordinator.swift; sourceTree = "<group>"; };
+		932E3D77228DB66E00C1F3A9 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		932E3D79228DC85E00C1F3A9 /* TabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
 		932E3D7B228DC88C00C1F3A9 /* NormalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoordinator.swift; sourceTree = "<group>"; };
 		932E3D7D228DC94E00C1F3A9 /* NormalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalModel.swift; sourceTree = "<group>"; };
 		932E3D7F228DC97F00C1F3A9 /* CENormalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CENormalModel.swift; sourceTree = "<group>"; };
@@ -116,6 +139,11 @@
 		932E3DA4228F294B00C1F3A9 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		932E3DA8228F29AB00C1F3A9 /* LocalDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataService.swift; sourceTree = "<group>"; };
 		932E3DAB228F2FD500C1F3A9 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		936178F72295391E00144A97 /* DeepLinkOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkOption.swift; sourceTree = "<group>"; };
+		936178FB2295465F00144A97 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		936178FD229546B100144A97 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		93617900229548E600144A97 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9361790222954BD600144A97 /* RouterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterImp.swift; sourceTree = "<group>"; };
 		93F8C3F92291706100ABB0FA /* CERegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CERegisterViewModel.swift; sourceTree = "<group>"; };
 		93F8C3FD2291712700ABB0FA /* CERegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CERegisterModel.swift; sourceTree = "<group>"; };
 		93F8C3FF2291721000ABB0FA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -146,6 +174,163 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93219D3E229591CE00B18F6E /* Parents */ = {
+			isa = PBXGroup;
+			children = (
+				93219D3F229591DE00B18F6E /* BaseCoordinator.swift */,
+				930269AC229BB5C100965CBE /* BaseNav.swift */,
+			);
+			path = Parents;
+			sourceTree = "<group>";
+		};
+		93219D4122963F0200B18F6E /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				93219D6322969FED00B18F6E /* FriendDetail Flow */,
+				93219D5F22969F7200B18F6E /* FriendList Flow */,
+				93219D5A2296967200B18F6E /* NormalViewFlow */,
+				93219D452296562F00B18F6E /* LoginAndRegisterFlow */,
+				93219D422296539D00B18F6E /* MainTabbarFlow */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		93219D422296539D00B18F6E /* MainTabbarFlow */ = {
+			isa = PBXGroup;
+			children = (
+				93219D48229659AA00B18F6E /* View */,
+				932E3D79228DC85E00C1F3A9 /* TabbarCoordinator.swift */,
+			);
+			path = MainTabbarFlow;
+			sourceTree = "<group>";
+		};
+		93219D452296562F00B18F6E /* LoginAndRegisterFlow */ = {
+			isa = PBXGroup;
+			children = (
+				93219D47229659A300B18F6E /* View */,
+				93219D462296597D00B18F6E /* ViewModel */,
+				932E3D68228D5B5F00C1F3A9 /* LoginAndRegisterCoordinator.swift */,
+			);
+			path = LoginAndRegisterFlow;
+			sourceTree = "<group>";
+		};
+		93219D462296597D00B18F6E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				932E3D64228D41A600C1F3A9 /* CELoginViewModel.swift */,
+				93F8C3F92291706100ABB0FA /* CERegisterViewModel.swift */,
+				932E3D5E228D3D1600C1F3A9 /* LoginAndRegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		93219D47229659A300B18F6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				932E3D24228D220700C1F3A9 /* LoginAndRegisterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93219D48229659AA00B18F6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93219D43229653F700B18F6E /* TabbarView.swift */,
+				932E3D77228DB66E00C1F3A9 /* TabbarController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93219D4E22965E0500B18F6E /* Imp */ = {
+			isa = PBXGroup;
+			children = (
+				93219D5122965E5000B18F6E /* ModuleFactoryImp.swift */,
+				93219D582296948700B18F6E /* CoordinatorFactoryImp.swift */,
+			);
+			path = Imp;
+			sourceTree = "<group>";
+		};
+		93219D5A2296967200B18F6E /* NormalViewFlow */ = {
+			isa = PBXGroup;
+			children = (
+				932E3D7B228DC88C00C1F3A9 /* NormalCoordinator.swift */,
+				93219D5C2296968800B18F6E /* ViewModel */,
+				93219D5B2296968300B18F6E /* View */,
+			);
+			path = NormalViewFlow;
+			sourceTree = "<group>";
+		};
+		93219D5B2296968300B18F6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				932E3D5B228D256C00C1F3A9 /* NormalViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93219D5C2296968800B18F6E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				932E3D83228DCA7800C1F3A9 /* CENormalViewModel.swift */,
+				932E3D81228DC9C300C1F3A9 /* NormalViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		93219D5F22969F7200B18F6E /* FriendList Flow */ = {
+			isa = PBXGroup;
+			children = (
+				932E3D94228EA10900C1F3A9 /* FriendListCoordinator.swift */,
+				93219D6122969F8600B18F6E /* ViewModel */,
+				93219D6022969F8100B18F6E /* View */,
+			);
+			path = "FriendList Flow";
+			sourceTree = "<group>";
+		};
+		93219D6022969F8100B18F6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				932E3D88228E973500C1F3A9 /* FriendListTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93219D6122969F8600B18F6E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				932E3D8C228E9C0000C1F3A9 /* FriendListViewModel.swift */,
+				932E3D92228E9DC000C1F3A9 /* CEFriendListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		93219D6322969FED00B18F6E /* FriendDetail Flow */ = {
+			isa = PBXGroup;
+			children = (
+				932E3D98228EB41900C1F3A9 /* FriendDetailCoordinator.swift */,
+				93219D652296A00500B18F6E /* View */,
+				93219D6422969FF900B18F6E /* ViewModel */,
+			);
+			path = "FriendDetail Flow";
+			sourceTree = "<group>";
+		};
+		93219D6422969FF900B18F6E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				932E3D9E228EB56000C1F3A9 /* FriendDetailViewModel.swift */,
+				932E3DA0228EB70700C1F3A9 /* CEFriendDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		93219D652296A00500B18F6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				932E3D96228EB30D00C1F3A9 /* FriendDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		932E3D16228D220700C1F3A9 = {
 			isa = PBXGroup;
 			children = (
@@ -169,15 +354,16 @@
 		932E3D21228D220700C1F3A9 /* CoordinatorExample */ = {
 			isa = PBXGroup;
 			children = (
+				93219D4122963F0200B18F6E /* Flow */,
+				93219D3E229591CE00B18F6E /* Parents */,
+				936178FF229548CC00144A97 /* Router */,
+				936178F92295463100144A97 /* Factory */,
+				936178F62295381F00144A97 /* Protocol */,
+				936178F52295380900144A97 /* Application */,
 				932E3DAA228F2FC600C1F3A9 /* Notification */,
 				932E3DA7228F299A00C1F3A9 /* Service */,
 				932E3DA3228F293B00C1F3A9 /* Singleton */,
-				932E3D76228DB64D00C1F3A9 /* Tabbar */,
 				932E3D60228D409400C1F3A9 /* Model */,
-				932E3D58228D24C900C1F3A9 /* ViewModel */,
-				932E3D57228D24BF00C1F3A9 /* View */,
-				932E3D52228D230000C1F3A9 /* Coordinators */,
-				932E3D22228D220700C1F3A9 /* AppDelegate.swift */,
 				932E3D26228D220700C1F3A9 /* Main.storyboard */,
 				932E3D8A228E995F00C1F3A9 /* friends.json */,
 				932E3D55228D239500C1F3A9 /* Storyboarded.swift */,
@@ -206,55 +392,6 @@
 			path = CoordinatorExampleUITests;
 			sourceTree = "<group>";
 		};
-		932E3D52228D230000C1F3A9 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				932E3D50228D22C600C1F3A9 /* Coordinator.swift */,
-				932E3D53228D231E00C1F3A9 /* AppCoordinator.swift */,
-				932E3D68228D5B5F00C1F3A9 /* LoginAndRegisterCoordinator.swift */,
-				932E3D7B228DC88C00C1F3A9 /* NormalCoordinator.swift */,
-				932E3D79228DC85E00C1F3A9 /* NoramlMainCoordinator.swift */,
-				932E3D94228EA10900C1F3A9 /* FriendListCoordinator.swift */,
-				932E3D98228EB41900C1F3A9 /* FriendDetailCoordinator.swift */,
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		932E3D57228D24BF00C1F3A9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				932E3D24228D220700C1F3A9 /* LoginAndRegisterViewController.swift */,
-				932E3D5B228D256C00C1F3A9 /* NormalViewController.swift */,
-				932E3D88228E973500C1F3A9 /* FriendListTableViewController.swift */,
-				932E3D96228EB30D00C1F3A9 /* FriendDetailViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		932E3D58228D24C900C1F3A9 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				932E3D5D228D3BDF00C1F3A9 /* Protocols */,
-				932E3D64228D41A600C1F3A9 /* CELoginViewModel.swift */,
-				93F8C3F92291706100ABB0FA /* CERegisterViewModel.swift */,
-				932E3D83228DCA7800C1F3A9 /* CENormalViewModel.swift */,
-				932E3D92228E9DC000C1F3A9 /* CEFriendListViewModel.swift */,
-				932E3DA0228EB70700C1F3A9 /* CEFriendDetailViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		932E3D5D228D3BDF00C1F3A9 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				932E3D5E228D3D1600C1F3A9 /* LoginAndRegisterViewModel.swift */,
-				932E3D81228DC9C300C1F3A9 /* NormalViewModel.swift */,
-				932E3D8C228E9C0000C1F3A9 /* FriendListViewModel.swift */,
-				932E3D9E228EB56000C1F3A9 /* FriendDetailViewModel.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		932E3D60228D409400C1F3A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,14 +415,6 @@
 				932E3D9A228EB43E00C1F3A9 /* FriendDetailModel.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		932E3D76228DB64D00C1F3A9 /* Tabbar */ = {
-			isa = PBXGroup;
-			children = (
-				932E3D77228DB66E00C1F3A9 /* MainTabbarController.swift */,
-			);
-			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		932E3D85228E968D00C1F3A9 /* Data Structure */ = {
@@ -319,6 +448,55 @@
 				932E3DAB228F2FD500C1F3A9 /* NotificationName.swift */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		936178F52295380900144A97 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				932E3D22228D220700C1F3A9 /* AppDelegate.swift */,
+				932E3D53228D231E00C1F3A9 /* AppCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		936178F62295381F00144A97 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				932E3D50228D22C600C1F3A9 /* Coordinator.swift */,
+				936178F72295391E00144A97 /* DeepLinkOption.swift */,
+				936178FD229546B100144A97 /* Presentable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		936178F92295463100144A97 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				93219D4E22965E0500B18F6E /* Imp */,
+				936178FA2295464A00144A97 /* Interface */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		936178FA2295464A00144A97 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				936178FB2295465F00144A97 /* CoordinatorFactory.swift */,
+				93219D4922965C9800B18F6E /* AuthModuleFactory.swift */,
+				93219D5D2296991F00B18F6E /* NormalModuleFactory.swift */,
+				93219D662296A09D00B18F6E /* FriendListModuleFactory.swift */,
+				93219D682296A1DB00B18F6E /* FriendDetailModuleFactory.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		936178FF229548CC00144A97 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				93617900229548E600144A97 /* Router.swift */,
+				9361790222954BD600144A97 /* RouterImp.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,9 +631,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93219D672296A09D00B18F6E /* FriendListModuleFactory.swift in Sources */,
+				93617901229548E600144A97 /* Router.swift in Sources */,
 				932E3DA1228EB70700C1F3A9 /* CEFriendDetailViewModel.swift in Sources */,
 				932E3D9F228EB56000C1F3A9 /* FriendDetailViewModel.swift in Sources */,
-				932E3D78228DB66E00C1F3A9 /* MainTabbarController.swift in Sources */,
+				932E3D78228DB66E00C1F3A9 /* TabbarController.swift in Sources */,
 				932E3D97228EB30D00C1F3A9 /* FriendDetailViewController.swift in Sources */,
 				932E3DA5228F294B00C1F3A9 /* AppManager.swift in Sources */,
 				932E3DA9228F29AB00C1F3A9 /* LocalDataService.swift in Sources */,
@@ -463,17 +643,25 @@
 				932E3D89228E973500C1F3A9 /* FriendListTableViewController.swift in Sources */,
 				932E3D65228D41A600C1F3A9 /* CELoginViewModel.swift in Sources */,
 				932E3D9B228EB43E00C1F3A9 /* FriendDetailModel.swift in Sources */,
+				93219D5222965E5000B18F6E /* ModuleFactoryImp.swift in Sources */,
 				932E3D91228E9CD200C1F3A9 /* CEFriendListModel.swift in Sources */,
-				932E3D7A228DC85E00C1F3A9 /* NoramlMainCoordinator.swift in Sources */,
+				932E3D7A228DC85E00C1F3A9 /* TabbarCoordinator.swift in Sources */,
+				93219D692296A1DB00B18F6E /* FriendDetailModuleFactory.swift in Sources */,
+				930269AD229BB5C100965CBE /* BaseNav.swift in Sources */,
+				936178FC2295465F00144A97 /* CoordinatorFactory.swift in Sources */,
 				932E3D82228DC9C300C1F3A9 /* NormalViewModel.swift in Sources */,
 				932E3D99228EB41900C1F3A9 /* FriendDetailCoordinator.swift in Sources */,
 				932E3D80228DC97F00C1F3A9 /* CENormalModel.swift in Sources */,
+				93219D40229591DE00B18F6E /* BaseCoordinator.swift in Sources */,
 				932E3D84228DCA7800C1F3A9 /* CENormalViewModel.swift in Sources */,
 				932E3D56228D239500C1F3A9 /* Storyboarded.swift in Sources */,
+				93219D4A22965C9800B18F6E /* AuthModuleFactory.swift in Sources */,
 				932E3D54228D231E00C1F3A9 /* AppCoordinator.swift in Sources */,
+				936178F82295391E00144A97 /* DeepLinkOption.swift in Sources */,
 				932E3D25228D220700C1F3A9 /* LoginAndRegisterViewController.swift in Sources */,
 				932E3D8F228E9C9000C1F3A9 /* FriendListModel.swift in Sources */,
 				932E3D95228EA10900C1F3A9 /* FriendListCoordinator.swift in Sources */,
+				93219D5E2296991F00B18F6E /* NormalModuleFactory.swift in Sources */,
 				93F8C4002291721000ABB0FA /* User.swift in Sources */,
 				932E3D87228E96AD00C1F3A9 /* Friend.swift in Sources */,
 				932E3D67228D572000C1F3A9 /* CELoginModel.swift in Sources */,
@@ -484,10 +672,14 @@
 				932E3D63228D40BD00C1F3A9 /* LoginAndRegisterModel.swift in Sources */,
 				93F8C3FA2291706100ABB0FA /* CERegisterViewModel.swift in Sources */,
 				932E3D5F228D3D1600C1F3A9 /* LoginAndRegisterViewModel.swift in Sources */,
+				936178FE229546B100144A97 /* Presentable.swift in Sources */,
 				932E3D5C228D256C00C1F3A9 /* NormalViewController.swift in Sources */,
+				93219D592296948700B18F6E /* CoordinatorFactoryImp.swift in Sources */,
 				932E3D7E228DC94E00C1F3A9 /* NormalModel.swift in Sources */,
+				93219D44229653F700B18F6E /* TabbarView.swift in Sources */,
 				932E3D8D228E9C0000C1F3A9 /* FriendListViewModel.swift in Sources */,
 				932E3D93228E9DC000C1F3A9 /* CEFriendListViewModel.swift in Sources */,
+				9361790322954BD600144A97 /* RouterImp.swift in Sources */,
 				932E3D23228D220700C1F3A9 /* AppDelegate.swift in Sources */,
 				932E3D51228D22C600C1F3A9 /* Coordinator.swift in Sources */,
 			);

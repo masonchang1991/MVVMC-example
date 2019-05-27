@@ -11,8 +11,8 @@ import Foundation
 class CEFriendDetailViewModel: FriendDetailViewModel {
     
     var model: FriendDetailModel?
-    var viewDelegate: FriendDetailViewModelViewDelegate?
-    var coordinatorDelegate: FriendDetailViewModelCoordinatorDelegate?
+    weak var viewDelegate: FriendDetailViewModelViewDelegate?
+    weak var coordinatorDelegate: FriendDetailViewModelCoordinatorDelegate?
     
     var isFavorite: Bool = false {
         didSet {
